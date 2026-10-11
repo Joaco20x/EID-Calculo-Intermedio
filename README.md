@@ -36,8 +36,17 @@ Instalar con:
 pip install manim==0.21.0
 ```
 
-
-
+## Estructuras de carpetas
+EID-Calculo-Intermedio/
+├── README.md
+├── main.py
+├── comun.py
+└── escenas/
+    ├── __init__.py
+    ├── r1_rectangulos_fijos.py
+    ├── r2_refinamiento.py
+    └── r3_limite_proceso.py
+    
 ## Instrucciones de ejecución
 
 1. Clonar el repositorio:
