@@ -26,7 +26,7 @@
 ## Versiones
 
 - **Python:** 3.14.7
-- **Manim:** [completar]
+- **Manim:** 0.21.0
 
 ## Dependencias
 
