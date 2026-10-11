@@ -37,7 +37,6 @@ pip install manim==0.21.0
 ```
 
 ## Estructuras de carpetas
-## 📁 Estructura del proyecto
 
 ```text
 EID-Calculo-Intermedio/
