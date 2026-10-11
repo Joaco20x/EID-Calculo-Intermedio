@@ -33,19 +33,10 @@
 Instalar con:
 
 ```bash
-pip install manim
+pip install manim==0.21.0
 ```
 
-Dependencias adicionales:
 
-- [completar] (por ejemplo, LaTeX, si se usa `MathTex` o `Tex`)
-
-## Escenas
-
-| Archivo | Escena | Descripción |
-|---|---|---|
-| `[completar].py` | `[completar]` | [completar] |
-| `[completar].py` | `[completar]` | [completar] |
 
 ## Instrucciones de ejecución
 
@@ -67,7 +58,7 @@ Dependencias adicionales:
 3. Instalar las dependencias:
 
 ```bash
-   pip install manim
+   pip install manim==0.21.0
 ```
 
 4. Renderizar una escena (calidad baja, con vista previa):
