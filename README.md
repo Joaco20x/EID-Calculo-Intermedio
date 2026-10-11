@@ -37,6 +37,9 @@ pip install manim==0.21.0
 ```
 
 ## Estructuras de carpetas
+## 📁 Estructura del proyecto
+
+```text
 EID-Calculo-Intermedio/
 ├── README.md
 ├── main.py
@@ -46,7 +49,17 @@ EID-Calculo-Intermedio/
     ├── r1_rectangulos_fijos.py
     ├── r2_refinamiento.py
     └── r3_limite_proceso.py
-    
+```
+
+### Descripción de los archivos
+
+* **`README.md`**: documentación general del proyecto, sus objetivos e instrucciones de ejecución.
+* **`main.py`**: punto de entrada principal del proyecto
+* **`escenas/`**: directorio que contiene las escenas desarrolladas con Manim.
+  * **`r1_rectangulos_fijos.py`**: visualización de la suma de Riemann izquierda con \(n=4\).
+  * **`r2_refinamiento.py`**: animación del refinamiento de los rectángulos y la aproximación de la suma.
+  * **`r3_limite_proceso.py`**: representación de la convergencia de las sumas de Riemann y explicación del límite \(n\to\infty\).
+
 ## Instrucciones de ejecución
 
 1. Clonar el repositorio:
