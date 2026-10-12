@@ -13,7 +13,7 @@
 |---|---|
 | Joaquín Valenzuela | [@Joaco20x](https://github.com/Joaco20x) |
 | Gabriel Gutiérrez | [@Gabrielgutierrez1](https://github.com/Gabrielgutierrez1) |
-| Aylin Melillan | — |
+| Aylin Melillan | — | [@AilynMelillan](https://github.com/AilynMelillan) |
 
 ## Tema
 
