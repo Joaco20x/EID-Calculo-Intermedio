@@ -87,3 +87,32 @@ EID-Calculo-Intermedio/
 ```bash
    manim -pql [archivo].py [NombreEscena]
 ```
+
+### R2: refinamiento por punto medio
+
+La escena es autocontenida y dura **60 segundos, sin audio**. Es un segmento
+del video grupal de 4 a 6 minutos; las pausas permiten incorporar la voz al editar.
+
+```bash
+manim -pql escenas/r2_refinamiento.py R2Refinamiento
+```
+
+Guía sugerida de narración (ajustar al ritmo de quien grabe):
+
+| Tiempo | Narración |
+|---|---|
+| 0–12 s | Aproximamos el área bajo la curva x al cuadrado más uno, entre cero y dos. Dividimos el intervalo en partes iguales y usamos el punto medio para calcular cada altura. |
+| 12–24 s | Con dos rectángulos, el ancho es uno. Los puntos medios son cero coma cinco y uno coma cinco. Sus alturas son uno coma veinticinco y tres coma veinticinco: la suma de áreas es cuatro coma cinco. |
+| 24–31 s | Con cuatro rectángulos, el ancho se reduce a la mitad. La suma aumenta a cuatro coma seiscientos veinticinco y el error disminuye. |
+| 31–38 s | Con ocho, los rectángulos son más estrechos. La tabla conserva los resultados para comparar cómo mejora esta aproximación. |
+| 38–48 s | Con dieciséis, la suma se acerca todavía más a catorce tercios. Sigue siendo una aproximación: el error es pequeño, pero positivo. |
+| 48–60 s | Cada suma utiliza una cantidad finita de rectángulos. Tender a infinito significa estudiar cómo se comportan las sumas al aumentar n sin límite. Esta animación ilustra el proceso; la justificación matemática viene al estudiar el límite. |
+
+Para el montaje final, renderizar en 1080p a 60 fps:
+
+```bash
+manim -qh escenas/r2_refinamiento.py R2Refinamiento
+```
+
+El MP4 se guarda en `media/videos/r2_refinamiento/1080p60/`.
+La carpeta `media/` se genera localmente y está excluida de Git.
