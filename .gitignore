@@ -1,0 +1,10 @@
+# Archivos generados por Manim (videos, imágenes y LaTeX)
+media/
+
+# Entornos virtuales de Python
+.venv/
+venv/
+
+# Caché y bytecode de Python
+__pycache__/
+*.py[cod]
