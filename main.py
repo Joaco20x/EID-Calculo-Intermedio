@@ -2,17 +2,21 @@
 
 from manim import FadeOut, Scene
 
-from escenas import r1_rectangulos_fijos, r2_refinamiento, r3_limite_proceso
+from escenas import (
+    creditos, presentacion, r1_rectangulos_fijos, r2_refinamiento, r3_limite_proceso,
+)
 
 
 class ProyectoIntegral(Scene):
-    """Reproduce las tres partes en orden dentro de un único video."""
+    """Reproduce presentación, tres partes y créditos en un único video."""
 
     def construct(self):
         escenas = (
+            presentacion.Presentacion,
             r1_rectangulos_fijos.R1RectangulosFijos,
             r2_refinamiento.R2Refinamiento,
             r3_limite_proceso.R3LimiteProceso,
+            creditos.Creditos,
         )
 
         for indice, escena in enumerate(escenas):
