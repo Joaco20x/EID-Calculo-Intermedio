@@ -53,9 +53,9 @@ EID-Calculo-Intermedio/
 ### Descripción de los archivos
 
 * **`README.md`**: documentación general del proyecto, sus objetivos e instrucciones de ejecución.
-* **`main.py`**: punto de entrada principal del proyecto
+* **`main.py`**: escena `ProyectoIntegral`, que reúne R1, R2 y R3 en un solo video.
 * **`escenas/`**: directorio que contiene las escenas desarrolladas con Manim.
-  * **`r1_rectangulos_fijos.py`**: visualización de la suma de Riemann izquierda con \(n=4\).
+  * **`r1_rectangulos_fijos.py`**: visualización de la suma de Riemann por punto medio con \(n=4\).
   * **`r2_refinamiento.py`**: animación del refinamiento de los rectángulos y la aproximación de la suma.
   * **`r3_limite_proceso.py`**: representación de la convergencia de las sumas de Riemann y explicación del límite \(n\to\infty\).
 
@@ -87,6 +87,30 @@ EID-Calculo-Intermedio/
 ```bash
    manim -pql [archivo].py [NombreEscena]
 ```
+
+### Video completo
+
+Desde la raíz del proyecto, con el entorno virtual activado:
+
+```bash
+manim -pql main.py ProyectoIntegral
+```
+
+Ejecuta R1 (rectángulos fijos), R2 (refinamiento) y R3 (límite), en ese orden,
+con un desvanecimiento de un segundo entre escenas. Las escenas también
+pueden renderizarse individualmente con sus comandos originales.
+
+Para exportar el conjunto en 1080p a 60 fps:
+
+```bash
+manim -qh main.py ProyectoIntegral
+```
+
+El archivo resultante es `media/videos/main/1080p60/ProyectoIntegral.mp4`.
+El render no incorpora voz, presentación ni créditos; se agregan al montaje final.
+La duración comprobada en calidad baja es de aproximadamente **4 minutos y
+54 segundos**, dejando alrededor de un minuto para presentación y créditos
+dentro del máximo de 6 minutos.
 
 ### R2: refinamiento por punto medio
 
