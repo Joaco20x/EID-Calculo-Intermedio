@@ -42,22 +42,25 @@ pip install manim==0.21.0
 EID-Calculo-Intermedio/
 ├── README.md
 ├── main.py
-├── comun.py
 └── escenas/
     ├── __init__.py
+    ├── presentacion.py
     ├── r1_rectangulos_fijos.py
     ├── r2_refinamiento.py
-    └── r3_limite_proceso.py
+    ├── r3_limite_proceso.py
+    └── creditos.py
 ```
 
 ### Descripción de los archivos
 
 * **`README.md`**: documentación general del proyecto, sus objetivos e instrucciones de ejecución.
-* **`main.py`**: escena `ProyectoIntegral`, que reúne R1, R2 y R3 en un solo video.
+* **`main.py`**: escena `ProyectoIntegral`, que reúne presentación, R1, R2, R3 y créditos en un solo video.
 * **`escenas/`**: directorio que contiene las escenas desarrolladas con Manim.
+  * **`presentacion.py`**: tema y pregunta central del proyecto.
   * **`r1_rectangulos_fijos.py`**: visualización de la suma de Riemann por punto medio con \(n=4\).
   * **`r2_refinamiento.py`**: animación del refinamiento de los rectángulos y la aproximación de la suma.
   * **`r3_limite_proceso.py`**: representación de la convergencia de las sumas de Riemann y explicación del límite \(n\to\infty\).
+  * **`creditos.py`**: integrantes y fuentes del proyecto, con títulos y autores sin enlaces en pantalla.
 
 ## Instrucciones de ejecución
 
@@ -96,7 +99,8 @@ Desde la raíz del proyecto, con el entorno virtual activado:
 manim -pql main.py ProyectoIntegral
 ```
 
-Ejecuta R1 (rectángulos fijos), R2 (refinamiento) y R3 (límite), en ese orden,
+Ejecuta la presentación, R1 (rectángulos fijos), R2 (refinamiento), R3 (límite)
+y los créditos, en ese orden,
 con un desvanecimiento de un segundo entre escenas. Las escenas también
 pueden renderizarse individualmente con sus comandos originales.
 
@@ -107,10 +111,41 @@ manim -qh main.py ProyectoIntegral
 ```
 
 El archivo resultante es `media/videos/main/1080p60/ProyectoIntegral.mp4`.
-El render no incorpora voz, presentación ni créditos; se agregan al montaje final.
-La duración comprobada en calidad baja es de aproximadamente **4 minutos y
-54 segundos**, dejando alrededor de un minuto para presentación y créditos
+El render incluye la presentación y los créditos; la voz se agrega al montaje final.
+La duración comprobada en calidad baja es de aproximadamente **5 minutos y 40 segundos**,
 dentro del máximo de 6 minutos.
+
+### Presentación
+
+La escena dura 12 segundos, sin audio, y muestra el tema y la pregunta central.
+El video completo añade un segundo de desvanecimiento antes de comenzar R1.
+
+```bash
+manim -pql escenas/presentacion.py Presentacion
+```
+
+### Créditos
+
+La escena dura 32 segundos y muestra integrantes, fuentes matemáticas,
+material docente y herramientas en tres pantallas, sin enlaces.
+
+```bash
+manim -pql escenas/creditos.py Creditos
+```
+
+Fuentes utilizadas:
+
+- *Cálculo volumen 1* (OpenStax) — G. Strang y E. Herman. Secciones 5.1 y 5.2.
+- *Cálculo (Apex)* (LibreTexts) — G. Hartman y colaboradores. Secciones 5.2 y 5.3.
+- *Introducción a la integral* — Universidad Católica de Temuco.
+- *Este teorema lo cambió todo | ¿Qué es la integral? El famoso nexo entre derivadas e integrales* — BlueDot.
+- *Manim Community Documentation* — Manim Community Developers.
+
+Declaración de inteligencia artificial: se utilizó ChatGPT (OpenAI) como apoyo
+para investigar conceptos matemáticos, organizar contenidos y revisar
+explicaciones y código. Según el registro de fuentes del equipo, la verificación
+se realizó contrastando las fuentes académicas citadas y comprobando los cálculos
+y las animaciones desarrolladas.
 
 ### R2: refinamiento por punto medio
 
