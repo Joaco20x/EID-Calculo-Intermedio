@@ -10,25 +10,25 @@ Ejecutar desde la raíz del proyecto:
 Para renderizado final de alta definición (1080p60):
     manim -qh escenas/r3_limite_proceso.py R3LimiteProceso
 
-Duración aproximada: 72 segundos, sin audio; pausas para narración sincronizada.
+Duración aproximada: 79 segundos, sin audio; pausas para narración sincronizada.
 Guía sugerida de narración:
 ----------------------------------------------------------------------------------
 Tiempo   | Narración sugerida
 ----------------------------------------------------------------------------------
 0–12 s   | Estudiamos el proceso del límite en la suma de Riemann para f(x) = x² + 1
          | en el intervalo cerrado cero dos.
-12–25 s  | Comenzamos con cuatro rectángulos por punto medio. El ancho de cada uno
+12–26 s  | Comenzamos con cuatro rectángulos por punto medio. El ancho de cada uno
          | es dos dividido por n. Al hacer n tender a infinito, el ancho tiende
          | estrictamente a cero: no asignamos a n el valor infinito, sino que
          | aumentamos indefinidamente la cantidad de particiones.
-25–46 s  | Al incrementar n sucesivamente a ocho, dieciséis, treinta y dos y
+26–49 s  | Al incrementar n sucesivamente a ocho, dieciséis, treinta y dos y
          | sesenta y cuatro rectángulos, el ancho disminuye y los rectángulos
          | se adaptan con precisión milimétrica a la curvatura, refinando el área.
-46–60 s  | Analíticamente, la suma tiene una fórmula cerrada: catorce tercios menos
+49–65 s  | Analíticamente, la suma tiene una fórmula cerrada: catorce tercios menos
          | dos sobre tres n al cuadrado. Al aplicar el límite cuando n tiende a
          | infinito, el término de error desaparece por completo, entregando
          | catorce tercios exactos.
-60–72 s  | En conclusión: cada suma de Riemann es finita. La integral definida no es
+65–79 s  | En conclusión: cada suma de Riemann es finita. La integral definida no es
          | una suma de infinitos rectángulos, sino el valor límite exacto al que
          | convergen dichas sumas.
 ----------------------------------------------------------------------------------
@@ -153,7 +153,7 @@ class R3LimiteProceso(Scene):
             FadeIn(panel_riemann),
             run_time=2,
         )
-        self.wait(2.5)
+        self.wait(4)
 
         # =====================================================================
         # 3. EXPLICACIÓN DEL ANCHO Δx -> 0 Y SIGNIFICADO DE n -> ∞
@@ -239,7 +239,7 @@ class R3LimiteProceso(Scene):
             rects_actual = nuevos_rects
             puntos_actual = nuevos_puntos
             indicador_estado = nuevo_indicador
-            self.wait(1.5)
+            self.wait(2.0)
 
         # Transición hacia el área continua exacta bajo la curva
         area_continua = ejes.get_area(
@@ -291,8 +291,8 @@ class R3LimiteProceso(Scene):
             ),
         ).arrange(DOWN, buff=0.13).move_to(RIGHT * 3.4 + UP * 0.90)
 
-        self.play(Write(panel_algebra), run_time=3)
-        self.wait(4)
+        self.play(Write(panel_algebra), run_time=3.5)
+        self.wait(5)
 
         # =====================================================================
         # 6. CUADRO CONCEPTUAL DE CIERRE (FINITUD VS. LÍMITE)
@@ -315,4 +315,4 @@ class R3LimiteProceso(Scene):
         )
 
         self.play(FadeIn(caja_cierre), run_time=2)
-        self.wait(7)
+        self.wait(9)
