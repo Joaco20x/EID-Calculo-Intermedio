@@ -114,14 +114,14 @@ class R2Refinamiento(Scene):
 
         self.play(Write(titulo), Write(formula), run_time=2)
         self.play(Create(ejes), Create(curva), Write(nombre_curva), run_time=2)
-        self.wait(4)
+        self.wait(6)
 
         rectangulos, puntos, ancho, datos = refinamiento(niveles[0])
         self.play(
             Create(rectangulos), FadeIn(puntos), FadeIn(ancho), Write(datos),
             FadeIn(exacta), FadeIn(nota), run_time=2,
         )
-        self.wait(2)
+        self.wait(4)
 
         ejemplo = VGroup(
             Text("Dos rectángulos: n = 2", font_size=25),
@@ -130,7 +130,7 @@ class R2Refinamiento(Scene):
             MathTex(r"S_2=(1{,}25+3{,}25)\cdot1=4{,}5", font_size=29, color=GREEN),
         ).arrange(DOWN, buff=0.22).move_to(RIGHT * 3.7 + UP * 0.65)
         self.play(ReplacementTransform(datos, ejemplo), run_time=1)
-        self.wait(8)
+        self.wait(10)
 
         # Tabla acumulativa: las filas anteriores permanecen para comparar.
         columnas = (1.25, 2.45, 3.95, 5.55)
@@ -193,4 +193,4 @@ class R2Refinamiento(Scene):
         ).arrange(DOWN, buff=0.13).to_edge(DOWN, buff=0.2)
         self.play(FadeOut(nota), FadeOut(ancho), run_time=1)
         self.play(Write(conclusion), run_time=2)
-        self.wait(9)
+        self.wait(11)
